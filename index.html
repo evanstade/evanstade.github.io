@@ -41,6 +41,7 @@
             serviceWorker.addEventListener('statechange', function(event) {
               log("Worker state is now "+event.target.state);
             });
+            log("Service worker has backgroundfetch? " + ("backgroundFetch" in serviceWorker));
           }, function(why) {
             log('Failed to install:' + why);
           });
